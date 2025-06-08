@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+        align-content: center;
+        overflow-x: hidden;
+    }
+    .mainbox{
+       
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+        align-content: center;
+        display: none;
+    }
+    .box{
+        height: 400px;
+        width: 400px;
+        background-color: #fff;
+        position: relative;
+        text-align: center;
+        align-items: center;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .buttonyes{
+        width: 100px;
+        height: 50px;
+        border-radius: 5px;
+        border: none;
+        background-color: #4CAF50;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    .buttonno{
+        width: 100px;
+        height: 50px;
+        border-radius: 5px;
+        border: none;
+        background-color: #f44336;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 30px;
+    }
+    .image{
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+    .main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+        align-content: center;
+        flex-direction: column;
+        background-color: aliceblue;
+        width: 400px;
+        border-radius: 10px;
+        height: 400px;
+    }
+
+    .button{
+        width: 100px;
+        height: 50px;
+        border-radius: 5px;
+        border: none;
+        background-color: #008CBA;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    .bodymain{
+        display: flex;
+        justify-content: center;
+    }
+
+</style>
+<div class="bodymain">
+<div id="show" class="main">
+    <h1>Are you ready for a test? </h1>
+    <button class="button">Yes</button>
+</div>
+
+</div>
+
+<div class="mainbox">
+     
+    <div class="box">
+        <h1>Are you Smart and Pretty?</h1>
+        <img class="image" src="./1657994297.friddscat_pop_cat_with_a_gum_by_friddscat_.gif" alt="">
+        <button id="positive_button" class="buttonyes">yes i am </button>
+        <button id="negative_button" class="buttonno">no im not</button>
+
+    </div>
+
+</div>
+
+
+
+
+<script>
+    var positive_button = document.getElementById('positive_button');
+    var hidden_menu = document.querySelector('.hidden-menu');
+    var negative_button = document.getElementById('negative_button');
+    var show = document
+
+    negative_button.addEventListener("mouseover", function () {
+        let randomX = Math.floor(Math.random() * 400) - 100; 
+        let randomY = Math.floor(Math.random() * 350) - 100; 
+
+        negative_button.style.transform = `translate(${randomX}px, ${randomY}px)`;
+    });
+
+    negative_button.addEventListener("mouseout", function () {
+        button.style.transform = "translate(0, 0)";
+    });
+
+
+    positive_button.addEventListener("click", function () {
+        hidden_menu.classList.toggle('show');
+    });
+
+    positive_button.addEventListener("click", function () {
+        alert("i told you, You are smart and pretty!");
+    });
+
+    show.addEventListener("click", function () {
+        document.querySelector('.mainbox').style.display = 'flex';
+        document.querySelector('.main').style.display = 'none';
+    });
+
+
+
+
+</script>
+
+
+
+</body>
+</html>
